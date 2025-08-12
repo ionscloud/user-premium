@@ -1,0 +1,150 @@
+{
+  "dns": {
+    "servers": [
+      {
+        "type": "tcp",
+        "tag": "cloudflare",
+        "detour": "SFA",
+        "server": "1.1.1.1"
+      },
+      {
+        "type": "tcp",
+        "tag": "DNS-PROVIDER",
+        "server": "112.215.203.246"
+      }
+    ],
+    "rules": [],
+    "strategy": "ipv4_only",
+    "independent_cache": false
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.18.0.1/30"
+      ],
+      "mtu": 9000,
+      "stack": "gvisor",
+      "auto_route": true,
+      "strict_route": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Internet",
+      "outbounds": [
+        "SFA",
+        "VIDIO 1",
+        "VIDIO 2",
+        "VIDIO 4",
+        "direct"
+      ],
+      "default": "SFA"
+    },
+    {
+      "type": "urltest",
+      "tag": "SFA",
+      "outbounds": [
+        "VIDIO 1",
+        "VIDIO 2",
+        "VIDIO 4"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m0s"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 1",
+      "server": "quiz.vidio.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ions-do.zidstore.id"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 2",
+      "server": "quiz.vidio.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ions-do2.zidstore.id"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do2.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 4",
+      "server": "quiz.vidio.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ions-do4.zidstore.id"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      }
+    ],
+    "final": "SFA",
+    "find_process": true,
+    "auto_detect_interface": true,
+    "default_domain_resolver": "DNS-PROVIDER",
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": false
+    }
+  }
+}
