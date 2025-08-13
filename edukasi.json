@@ -10,7 +10,7 @@
       {
         "type": "tcp",
         "tag": "DNS-PROVIDER",
-        "server": "112.215.203.246"
+        "server": "104.17.3.81"
       }
     ],
     "rules": [],
@@ -61,7 +61,7 @@
     {
       "type": "trojan",
       "tag": "EDU 1",
-      "server": "www.udemy.com",
+      "server": "104.17.3.81",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -80,7 +80,7 @@
     {
       "type": "trojan",
       "tag": "EDU 2",
-      "server": "www.udemy.com",
+      "server": "104.17.3.81",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -99,7 +99,7 @@
     {
       "type": "trojan",
       "tag": "EDU 4",
-      "server": "www.udemy.com",
+      "server": "104.17.3.81",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
