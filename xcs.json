@@ -61,7 +61,7 @@
     {
       "type": "trojan",
       "tag": "XCS 1",
-      "server": "ava.game.naver.com",
+      "server": "104.18.213.235",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -80,7 +80,7 @@
     {
       "type": "trojan",
       "tag": "XCS 2",
-      "server": "df.game.naver.com",
+      "server": "104.18.213.235",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -99,7 +99,7 @@
     {
       "type": "trojan",
       "tag": "XCS 4",
-      "server": "investor.fb.com",
+      "server": "104.18.213.235",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
