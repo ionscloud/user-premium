@@ -10,7 +10,7 @@
       {
         "type": "tcp",
         "tag": "DNS-PROVIDER",
-        "server": "104.17.3.81"
+        "server": "112.215.198.248"
       }
     ],
     "rules": [],
