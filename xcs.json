@@ -29,7 +29,7 @@
       "type": "tun",
       "tag": "tun-in",
       "address": [
-        "172.18.0.1/30",
+        "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
       "platform": {
@@ -53,8 +53,7 @@
         "🐊",
         "XCS 1",
         "XCS 2",
-        "XCS 4",
-        "direct"
+        "XCS 4"
       ],
       "default": "🐊"
     },
