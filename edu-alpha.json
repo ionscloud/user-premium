@@ -141,7 +141,7 @@
       "tag": "server 1",
       "server": "104.17.3.81",
       "server_port": 443,
-      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -160,7 +160,7 @@
       "tag": "server 2",
       "server": "104.17.3.81",
       "server_port": 443,
-      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "insecure": true,
