@@ -160,7 +160,7 @@
       "tag": "server 2",
       "server": "ava.game.naver.com",
       "server_port": 443,
-      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -179,7 +179,7 @@
       "tag": "server 4",
       "server": "ava.game.naver.com",
       "server_port": 443,
-      "password": "ee02a5e7-eefd-4c67-a4f4-6d0291826ff8",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "insecure": true,
