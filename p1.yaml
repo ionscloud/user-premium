@@ -1,0 +1,29 @@
+proxies:
+- name: server1
+  type: trojan
+  server: ava.game.naver.com
+  port: 443
+  password: 1887c273-a510-4aa9-9e02-c65dd8ca3712
+  tls: true
+  skip-cert-verify: true
+  sni: ions-do.zidstore.id
+  network: ws
+  udp: true
+  ws-opts:
+    path: /whatever/trojan-ws
+    headers:
+      Host: ions-do.zidstore.id
+- name: server2
+  type: trojan
+  server: ava.game.naver.com
+  port: 443
+  password: 1887c273-a510-4aa9-9e02-c65dd8ca3712
+  tls: true
+  skip-cert-verify: true
+  sni: ions-do2.zidstore.id
+  network: ws
+  udp: true
+  ws-opts:
+    path: /whatever/trojan-ws
+    headers:
+      Host: ions-do2.zidstore.id
