@@ -1,0 +1,223 @@
+{
+  "dns": {
+    "servers": [
+      {
+        "type": "udp",
+        "tag": "cloudflare",
+        "detour": "🐊",
+        "server": "1.1.1.1"
+      },
+      {
+        "type": "udp",
+        "tag": "DNS-PROVIDER",
+        "server": "112.215.203.247"
+      }
+    ],
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed",
+      "listen": "::",
+      "listen_port": 7890
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Internet",
+      "outbounds": [
+        "🐊",
+        "VIDIO 1",
+        "VIDIO 2",
+        "VIDIO 4",
+        "VIDIO 3",
+        "VIDIO 5",
+        "VIDIO 6",
+        "direct"
+      ],
+      "default": "🐊"
+    },
+    {
+      "type": "urltest",
+      "tag": "🐊",
+      "outbounds": [
+        "VIDIO 1",
+        "VIDIO 2",
+        "VIDIO 4",
+        "VIDIO 3",
+        "VIDIO 5",
+        "VIDIO 6"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m0s"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 1",
+      "server": "ade.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 2",
+      "server": "int-optimizely.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do2.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do2.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 4",
+      "server": "library.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 3",
+      "server": "preview.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 5",
+      "server": "stage-optimizely.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "VIDIO 6",
+      "server": "trust.zoom.com",
+      "server_port": 443,
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/whatever/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      }
+    ],
+    "final": "🐊",
+    "find_process": true,
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "default_domain_resolver": "DNS-PROVIDER"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
