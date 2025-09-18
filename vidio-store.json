@@ -139,7 +139,7 @@
     {
      "tag": "server I",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "server": "172.66.144.39",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -168,7 +168,7 @@
     {
       "tag": "server II",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "server": "q172.66.144.39",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
@@ -197,7 +197,7 @@
     {
       "tag": "server III",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "server": "172.66.144.39",
       "server_port": 443,
       "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
