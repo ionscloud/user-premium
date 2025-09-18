@@ -97,7 +97,7 @@
     {
       "type": "trojan",
       "tag": "7hari",
-      "server": "quiz.vidio.com",
+      "server": "172.66.144.39",
       "server_port": 443,
       "password": "90d29c73-b381-49b4-9f21-461745e43ac2",
       "tls": {
