@@ -97,7 +97,7 @@
     {
       "type": "trojan",
       "tag": "DO I",
-      "server": "quiz.vidio.com",
+      "server": "172.66.144.39",
       "server_port": 443,
       "password": "2bd3a2b0-839e-4d43-9956-96a802c22d50",
       "tls": {
