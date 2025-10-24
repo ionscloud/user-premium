@@ -136,7 +136,7 @@
     {
      "tag": "server I",
       "type": "trojan",
-      "server": "www.edukasi.com",
+      "server": "www.udemy.com",
       "server_port": 443,
       "password": 
       "87599de8-178a-41a8-8726-7443e623bc45",
@@ -166,7 +166,7 @@
     {
       "tag": "server II",
       "type": "trojan",
-      "server": "www.edukasi.com",
+      "server": "www.udemy.com",
       "server_port": 443,
       "password": "87599de8-178a-41a8-8726-7443e623bc45",
       "tls": {
