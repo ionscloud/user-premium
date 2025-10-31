@@ -151,7 +151,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/edukasi/trojan-ws",
+        "path": "/trojan-ws",
         "headers": {
           "Host": "ions-do.zidstore.id"
         }
@@ -180,7 +180,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/edukasi/trojan-ws",
+        "path": "/trojan-ws",
         "headers": {
           "Host": "ions-do.zidstore.id"
         }
