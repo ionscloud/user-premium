@@ -55,7 +55,7 @@
       {
         "domain_suffix": [
           "ckzk.xyz",
-          "ckzk.xyz"
+          "ions-do.zds.web.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,29 +119,29 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "server I",
-        "server II"
+        "IKD I",
+        "DO I"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "server I",
-        "server II"
+        "IKD I",
+        "DO I"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-     "tag": "server I",
+     "tag": "IKD I",
       "type": "trojan",
-      "server": "ava.game.naver.com",
+      "server": "support.zoom.us",
       "server_port": 443,
       "password":"1c9797620e402d53",
       "tls": {
         "enabled": true,
-        "server_name": "ckzk.xyz",
+        "server_name": "support.zoom.us.ckzk.xyz",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -152,7 +152,7 @@
         "type": "ws",
         "path": "/ions/buy-trojan-ws-pm-telegram-at-synricha",
         "headers": {
-          "Host": "ckzk.xyz"
+          "Host": "support.zoom.us.ckzk.xyz"
         }
       },
       "multiplex": {
@@ -163,14 +163,14 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "server II",
+      "tag": "DO I",
       "type": "trojan",
-      "server": "ava.game.naver.com",
+      "server": "support.zoom.us",
       "server_port": 443,
-      "password": "1c9797620e402d53",
+      "password": "87599de8-178a-41a8-8726-7443e623bc45",
       "tls": {
         "enabled": true,
-        "server_name": "ckzk.xyz",
+        "server_name": "support.zoom.us.ions-do.zds.web.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -179,9 +179,9 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ions/buy-trojan-ws-pm-telegram-at-synricha",
+        "path": "/ions/trojan-ws",
         "headers": {
-          "Host": "ckzk.xyz"
+          "Host": "support.zoom.us.ions-do.zds.web.id"
         }
       },
       "multiplex": {
