@@ -39,8 +39,8 @@
       },
       {
         "domain_suffix": [
-          "ions-do.zds.web.id",
-          "ions-do.zds.web.id"
+          "ions.zds.web.id",
+          "ions.zds.web.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -127,7 +127,7 @@
       "password": "87599de8-178a-41a8-8726-7443e623bc45",
       "tls": {
         "enabled": true,
-        "server_name": "support.zoom.us.ions-do.zds.web.id",
+        "server_name": "support.zoom.us.ions.zds.web.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -142,7 +142,7 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "support.zoom.us.ions-do.zds.web.id"
+          "Host": "support.zoom.us.ions.zds.web.id"
         }
       }
     },
@@ -155,7 +155,7 @@
       "password": "87599de8-178a-41a8-8726-7443e623bc45",
       "tls": {
         "enabled": true,
-        "server_name": "support.zoom.us.ions-do.zds.web.id",
+        "server_name": "support.zoom.us.ions.zds.web.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -170,7 +170,7 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "support.zoom.us.ions-do.zds.web.id"
+          "Host": "support.zoom.us.ions.zds.web.id"
         }
       }
     },
