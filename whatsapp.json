@@ -150,7 +150,7 @@
       "type": "trojan",
       "tag": "server II",
       "domain_strategy": "ipv4_only",
-      "server": "104.18.1.196.",
+      "server": "104.18.1.196",
       "server_port": 443,
       "password": "e603aec3-b525-4ead-ba7a-2dc10268f662",
       "tls": {
